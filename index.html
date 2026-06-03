@@ -543,7 +543,7 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                     return;
                 }
 
-                const API_BASE = (window.location.protocol === 'file:') ? 'http://192.168.0.23:5000' : '';
+                const API_BASE = 'https://zenithstats-backend.onrender.com';
 
                 // 1. Profil du joueur
                 const resProfil1 = await fetch(`${API_BASE}/api/coach?game_name=${encodeURIComponent(name)}&tag_line=${encodeURIComponent(tag)}`);
