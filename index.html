@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2311131a'/><path d='M8 8h16v4L12 20h12v4H8v-4l12-8H8V8z' fill='%235b6cff'/><polygon points='22,5 24,7 26,5 25,8 27,9 24,10 23,12 22,9 20,8 22,7' fill='%23ffffff'/></svg>">
+    <title>ZenithStats - Améliorez votre niveau sur LoL</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2311131a'/><path d='M8 8h16v4L12 20h12v4H8v-4l12-8H8V8z' fill='%235b6cff'/><polygon points='22,5 24,7 26,5 25,8 27,9 24,10 23,12 22,9 20,8 22,7' fill='%23ffffff'/></svg>">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         /* --- STYLE GLOBAL & DESIGN --- */
         body {
-    background-color: #0b0e14;
-    color: white;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;          /* 🌟 À ajouter */
-    flex-direction: column; /* 🌟 À ajouter */
-    min-height: 100vh;      /* 🌟 À ajouter */
-}
+            background-color: #0b0e14;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
         /* Barre de navigation */
         .navbar {
@@ -58,7 +59,7 @@
             color: #5b6cff;
         }
 
-        /* Le gros bouton de téléchargement rouge */
+        /* Le gros bouton de téléchargement rouge constructeur */
         .btn-download-app {
             background: linear-gradient(135deg, #ff4b4b, #c21a1a) !important;
             color: white !important;
@@ -350,11 +351,11 @@
                 </p>
                 <div style="margin-bottom: 25px; border-left: 4px solid #ff4b4b; padding-left: 15px;">
                     <h3 style="color: white; margin-bottom: 5px;">🎯 Overlay In-Game en Temps Réel</h3>
-                    <p style="color: #a3a3a3; margin: 0;">Ne perdez plus de temps à chercher les builds. En jeu, un overlay discret affiche vos runes, l'ordre des sorts et les timers de jungle directement sur votre écran.</p>
+                    <p style="color: #a3a3a3; margin: 0;">Ne perdez plus de temps à chercher les builds. En jeu, un overlay discret affiche vos runes, l'ordre des sorts et la matrice de scoring d'objets optimale directement sur votre écran.</p>
                 </div>
                 <div style="margin-bottom: 25px; border-left: 4px solid #5b6cff; padding-left: 15px;">
                     <h3 style="color: white; margin-bottom: 5px;">📊 Débrief Automatique de Fin de Partie</h3>
-                    <p style="color: #a3a3a3; margin: 0;">Dès la fin de votre match, l'app génère un rapport complet. Comparez votre farm (CS/min) et votre vision par rapport aux objectifs du rang visé.</p>
+                    <p style="color: #a3a3a3; margin: 0;">Dès la fin de votre match, l'app fait surgir le Dashboard. Comparez votre farm (CS/min) et votre vision par rapport aux objectifs du rang visé grâce au grimoire de notes local.</p>
                 </div>
                 <div style="text-align: center; margin-top: 35px; border-top: 1px solid #2d3855; padding-top: 25px;">
                     <button class="btn-download-app" style="padding: 12px 25px; font-size: 1rem;" onclick="telechargerAppAlert()">Rejoindre la bêta de l'application</button>
@@ -364,17 +365,12 @@
 
     </div>
 
-<!-- ========================================== -->
-    <!-- SECTION FONCTIONNALITÉS (LANDING PAGE)     -->
-    <!-- ========================================== -->
     <div id="landing-features" style="max-width: 1000px; margin: -50px auto 120px auto; padding: 0 20px; width: 100%; box-sizing: border-box;">
         <h3 style="text-align: center; color: #ffffff; font-family: sans-serif; margin-bottom: 25px; font-size: 1.4em; letter-spacing: 0.5px;">
             Pourquoi utiliser <span style="color: #5b6cff; font-weight: bold;">ZenithStats</span> ?
         </h3>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-            
-            <!-- Carte 1 : Stats -->
             <div class="feature-card" style="background-color: #11131a; border: 1px solid #1c1f26; border-radius: 12px; padding: 25px; text-align: left; transition: transform 0.2s, border-color 0.2s;">
                 <div style="font-size: 2em; margin-bottom: 15px;">📊</div>
                 <h4 style="color: #ffffff; margin: 0 0 10px 0; font-family: sans-serif; font-size: 1.1em;">Analyses de Matchs</h4>
@@ -383,7 +379,6 @@
                 </p>
             </div>
 
-            <!-- Carte 2 : Coach -->
             <div class="feature-card" style="background-color: #11131a; border: 1px solid #1c1f26; border-radius: 12px; padding: 25px; text-align: left; transition: transform 0.2s, border-color 0.2s;">
                 <div style="font-size: 2em; margin-bottom: 15px;">🧠</div>
                 <h4 style="color: #ffffff; margin: 0 0 10px 0; font-family: sans-serif; font-size: 1.1em;">Conseils du Coach Zenith</h4>
@@ -392,7 +387,6 @@
                 </p>
             </div>
 
-            <!-- Carte 3 : Graphiques -->
             <div class="feature-card" style="background-color: #11131a; border: 1px solid #1c1f26; border-radius: 12px; padding: 25px; text-align: left; transition: transform 0.2s, border-color 0.2s;">
                 <div style="font-size: 2em; margin-bottom: 15px;">📈</div>
                 <h4 style="color: #ffffff; margin: 0 0 10px 0; font-family: sans-serif; font-size: 1.1em;">Courbe de Progression</h4>
@@ -400,7 +394,6 @@
                     Visualisez l'évolution de votre niveau match après match grâce à un graphique de KDA dynamique.
                 </p>
             </div>
-
         </div>
     </div>
 
@@ -412,10 +405,8 @@
         }
     </style>
 
-    <!-- Le footer vient se placer juste en dessous, libre et indépendant -->
     <footer style="background-color: #0e1015; color: #636a7c; padding: 20px 15px; margin-top: auto; border-top: 1px solid #1c1f26; font-family: sans-serif; font-size: 0.8em;">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px;">
-            
             <div style="text-align: center; font-style: italic; color: #4e5361; line-height: 1.5; max-width: 1000px; margin: 0 auto; font-size: 0.95em;">
                 ZenithStats n'est pas approuvé par Riot Games et ne reflète pas les points de vue ou les opinions de Riot Games ou de quiconque est officiellement impliqué dans la production ou la gestion des propriétés de Riot Games. Riot Games et toutes les propriétés associées sont des marques commerciales ou des marques déposées de Riot Games, Inc.
             </div>
@@ -423,20 +414,19 @@
             <hr style="border: 0; border-top: 1px solid #1c1f26; margin: 5px 0;">
 
             <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
-                
                 <div style="flex: 1; min-width: 240px;">
                     <h4 style="color: #ffffff; margin: 0 0 5px 0; font-size: 0.95em;">Mentions Légales</h4>
                     <p style="line-height: 1.4; margin: 0; color: #5c6273;">
                         <strong>Éditeur responsable :</strong> Amadéo Vael<br>
                         <strong>Contact :</strong> zenith.stats.gg@gmail.com<br>
-                        <strong>Hébergement :</strong> <span style="font-style: italic;">[Sera complété au déploiement]</span>
+                        <strong>Hébergement :</strong> GitHub Pages
                     </p>
                 </div>
 
                 <div style="flex: 1.5; min-width: 280px;">
                     <h4 style="color: #ffffff; margin: 0 0 5px 0; font-size: 0.95em;">Protection des Données (RGPD)</h4>
                     <p style="line-height: 1.4; margin: 0; color: #5c6273;">
-                        ZenithStats respecte votre vie privée. Sans base de données, l'application ne collecte, ne stocke ni ne partage aucune information personnelle. Le Riot ID sert exclusivement à interroger l'API officielle de Riot en temps réel. Aucun cookie de traçage n'est utilisé.
+                        ZenithStats respecte votre vie privée. Sans base de données distante, la plateforme web ne collecte ni ne partage aucune information personnelle. Le Riot ID sert exclusivement à interroger l'API en temps réel. Les notes de matchup sont enregistrées en local sur votre machine via notre client desktop. Aucun cookie de traçage n'est utilisé.
                     </p>
                 </div>
 
@@ -446,21 +436,26 @@
                         <span style="font-size: 0.85em; font-weight: normal;">Tous droits réservés.</span>
                     </p>
                 </div>
-
             </div>
         </div>
+    </footer>
 
     <script>
         let puuidActuel = "";
         let chart = null;
         let matchData = [];
         let runesMap = {};
+        const DATA_DRAGON_VERSION = "14.22.1"; // 🎯 TOUTES LES URLS SONT DESORMAIS ALIGNEES SUR LA STABLE
 
-        // Récupération des runes d'origine sur l'API Riot Community
+        // Récupération dynamique des runes
         async function loadRunes() {
             try {
-                const res = await fetch('https://ddragon.leagueoflegends.com/cdn/14.1.1/data/fr_FR/runesReforged.json');
-                const data = await res.json();
+                const res = await fetch(`https://ddragon.leagueoflegends.com/api/versions.json`);
+                const versions = await res.json();
+                const latestPatch = versions[0] || DATA_DRAGON_VERSION;
+                
+                const runesRes = await fetch(`https://ddragon.leagueoflegends.com/cdn/${latestPatch}/data/fr_FR/runesReforged.json`);
+                const data = await runesRes.json();
                 data.forEach(style => {
                     style.slots.forEach(slot => {
                         slot.runes.forEach(rune => {
@@ -472,11 +467,10 @@
         }
         loadRunes();
         
-       // Génère automatiquement les boutons de filtre selon les champions joués
         function genererBoutonsFiltres() {
             const championsUniques = [...new Set(matchData.map(m => m.championName))];
-            
             let filterBar = document.getElementById('dynamic-filter-bar');
+            
             if (!filterBar) {
                 filterBar = document.createElement('div');
                 filterBar.id = 'dynamic-filter-bar';
@@ -487,7 +481,6 @@
                     resContainer.parentNode.insertBefore(filterBar, resContainer);
                 }
 
-                // 🌟 SÉCURITÉ ONGLES : Cache automatiquement la barre si on clique sur un lien de la navbar
                 document.querySelectorAll('.navbar-brand, .navbar-links a').forEach(link => {
                     link.addEventListener('click', () => {
                         const bar = document.getElementById('dynamic-filter-bar');
@@ -496,9 +489,7 @@
                 });
             }
             
-            // On s'assure que la barre redevient visible si on relance une analyse
             filterBar.style.display = 'flex';
-            
             const btnStyle = "background: #5765f2; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: sans-serif; transition: opacity 0.2s;";
             filterBar.innerHTML = `<button style="${btnStyle}" onclick="filtrer('Tous')">Tout afficher</button>`;
             
@@ -509,16 +500,15 @@
             });
         }
 
-        // Analyseur principal connecté à l'API
         async function analyserJoueur() {
-            // Masque automatiquement les cartes d'accueil dès qu'on lance la recherche
-const featuresBlock = document.getElementById('landing-features');
-if (featuresBlock) featuresBlock.style.display = 'none';
+            const featuresBlock = document.getElementById('landing-features');
+            if (featuresBlock) featuresBlock.style.display = 'none';
+            
             const riotId = document.getElementById('riot-id').value;
             const res = document.getElementById('resultat');
             
             if (!riotId) {
-                if (res) res.innerHTML = "Veuillez entrer un Pseudo#Tag";
+                if (res) res.innerHTML = "<div style='text-align:center; padding:20px;'>Veuillez entrer un Pseudo#Tag</div>";
                 return;
             }
 
@@ -533,34 +523,30 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                     <path d="M12,4a8,8,0,0,1,7.89,6.7A1,1,0,0,0,20.85,10a1,1,0,0,0,.14-.85A10,10,0,0,0,12,2a1,1,0,0,0-1,1,1,1,0,0,0,1,1Z" fill="#5b6cff" class="spinner_z"/>
                 </svg>
                 Analyse en cours sur les serveurs Riot...
-            </div>
-        `;
+            </div>`;
 
             try {
                 const [name, tag] = riotId.split('#');
                 if(!tag) {
-                    if (res) res.innerHTML = "Format invalide (Exemple: Pseudo#EUW)";
+                    if (res) res.innerHTML = "<div style='text-align:center; padding:20px; color:#ff4d4d;'>Format invalide (Exemple: Pseudo#EUW)</div>";
                     return;
                 }
 
                 const API_BASE = 'https://zenithstats-backend.onrender.com';
 
-                // 1. Profil du joueur
                 const resProfil1 = await fetch(`${API_BASE}/api/coach?game_name=${encodeURIComponent(name)}&tag_line=${encodeURIComponent(tag)}`);
                 const profil = await resProfil1.json();
 
                 if (profil.success && profil.data) {
                     puuidActuel = profil.data.puuid.trim();
                     
-                    // 2. Récupération des IDs de matches
                     const resMatches = await fetch(`${API_BASE}/api/matches?puuid=${encodeURIComponent(puuidActuel)}`);
                     const matchesDataReceived = await resMatches.json();
                     
-                    // On accepte matchesDataReceived.matchIds ou directement le tableau si l'API change
                     const ids = matchesDataReceived.matchIds || (Array.isArray(matchesDataReceived) ? matchesDataReceived : []);
                     matchData = []; 
+                    let hasError = false;
 
-                    // 3. Boucle sur les détails des matchs
                     for (const matchId of ids) {
                         try {
                             const resDetails = await fetch(`${API_BASE}/api/match_details?match_id=${encodeURIComponent(matchId)}`);
@@ -569,44 +555,31 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                             if (jsonDetails.success && jsonDetails.details && jsonDetails.details.info) {
                                 const participants = jsonDetails.details.info.participants;
                                 const monJoueur = participants.find(p => p.puuid === puuidActuel);
-                                
-                                if (monJoueur) {
-                                    matchData.push(monJoueur);
-                                }
+                                if (monJoueur) matchData.push(monJoueur);
                             }
                         } catch (error) {
-                            console.error("Erreur lors de l'analyse :", error);
-                            
-                            // Si l'élément de résultat existe, on affiche un joli message d'erreur
-                            if (res) {
-                                res.innerHTML = `
-                                    <div style="text-align: center; padding: 30px; color: #ff4d4d; font-family: sans-serif; background-color: #1a1216; border: 1px solid #ff4d4d33; border-radius: 12px; max-width: 600px; margin: 20px auto;">
-                                        <div style="font-size: 2.5em; margin-bottom: 10px;">⚠️</div>
-                                        <h4 style="margin: 0 0 10px 0; font-size: 1.2em;">Une erreur est survenue</h4>
-                                        <p style="color: #636a7c; font-size: 0.95em; line-height: 1.5; margin: 0;">
-                                            Impossible de récupérer les données du joueur. Vérifie que le <strong>Pseudo#Tag</strong> est correct et que le serveur est en ligne.
-                                        </p>
-                                    </div>
-                                `;
-                            }
+                            console.error("Erreur d'analyse d'un match :", error);
+                            hasError = true;
                         }
                     }
 
+                    // 🛡️ FIX LOGIQUE : On ne wipe plus le HTML si on a réussi à charger des données !
                     if (res) res.innerHTML = "";
                     
-                    // 4. Lancement de l'affichage global
                     if (matchData.length > 0) {
                         genererBoutonsFiltres();
                         filtrer('Tous'); 
+                    } else if (hasError) {
+                        if (res) res.innerHTML = `<div style="text-align: center; padding: 30px; color: #ff4d4d;">⚠️ Impossible de charger l'historique. Vérifie ta connexion ou le statut de l'API.</div>`;
                     } else {
-                        if (res) res.innerHTML = "Aucun match récent trouvé pour ce joueur.";
+                        if (res) res.innerHTML = "<div style='text-align:center; padding:20px;'>Aucun match récent trouvé pour ce joueur.</div>";
                     }
                 } else {
-                    if (res) res.innerHTML = "Joueur introuvable. Vérifiez l'orthographe ou le Tag.";
+                    if (res) res.innerHTML = "<div style='text-align:center; padding:20px; color:#ff4d4d;'>Joueur introuvable. Vérifiez l'orthographe ou le Tag régional.</div>";
                 }
             } catch (e) {
                 console.error("Erreur durant l'analyse :", e);
-                if (res) res.innerHTML = "❌ Impossible de joindre l'API Python.";
+                if (res) res.innerHTML = "<div style='text-align:center; padding:20px; color:#ff4d4d;'>❌ Impossible de joindre la passerelle API Render.</div>";
             }
         }
 
@@ -614,8 +587,7 @@ if (featuresBlock) featuresBlock.style.display = 'none';
             const container = document.getElementById('stats-globales');
             if (!container || matchs.length === 0) return;
 
-            let totalKills = 0, totalDeaths = 0, totalAssists = 0;
-            let totalVision = 0, totalCs = 0;
+            let totalKills = 0, totalDeaths = 0, totalAssists = 0, totalVision = 0;
             let wins = 0;
 
             matchs.forEach(m => {
@@ -623,26 +595,20 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                 totalDeaths += m.deaths || 0;
                 totalAssists += m.assists || 0;
                 totalVision += m.visionScore || 0;
-                totalCs += (m.totalMinionsKilled || 0) + (m.neutralMinionsKilled || 0);
                 if (m.win) wins++;
             });
 
             const count = matchs.length;
             const kda = totalDeaths === 0 ? (totalKills + totalAssists) : ((totalKills + totalAssists) / totalDeaths).toFixed(2);
             const winrate = Math.round((wins / count) * 100);
-            
             const avgK = (totalKills / count).toFixed(1);
             const avgD = (totalDeaths / count).toFixed(1);
             const avgA = (totalAssists / count).toFixed(1);
             const avgVision = (totalVision / count).toFixed(1);
 
-            // Conseil dynamique Zenith
             let conseil = "🚀 Excellent comportement sur la map. Continue comme ça !";
-            if (kda < 2) {
-                conseil = "⚠️ Attention, tu meurs trop souvent. Évite les risques inutiles et joue safe sous tour !";
-            }
+            if (kda < 2) conseil = "⚠️ Attention, tu meurs trop souvent. Évite les risques inutiles et joue safe sous ta tour !";
 
-            // On injecte le HTML propre sans variable manquante
             container.innerHTML = `
                 <div style="padding: 20px; color: white;">
                     <h2>Moyennes globales :</h2>
@@ -655,29 +621,25 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                     <p style="margin-top: 15px; color: #ffb700; font-size: 1.05em;">
                         <strong>Conseil Zenith :</strong> ${conseil}
                     </p>
-                </div>
-            `;
+                </div>`;
         }
 
         function renderMatch(j) {
             const resContainer = document.getElementById('resultat');
             if (!resContainer) return;
 
-            // Calcul des CS et de la durée
             const totalCS = (j.totalMinionsKilled || 0) + (j.neutralMinionsKilled || 0);
-            const minutes = (j.gameDuration || 1) / 60;
+            const minutes = (j.gameDuration || 60) / 60;
             const csPerMin = (totalCS / minutes).toFixed(1);
             const vision = j.visionScore || 0;
 
-            // Génération des items
             let itemsHtml = "";
             for (let i = 0; i <= 6; i++) {
                 if (j[`item${i}`]) {
-                    itemsHtml += `<img src="https://ddragon.leagueoflegends.com/cdn/16.11.1/img/item/${j[`item${i}`]}.png" class="item-icon">`;
+                    itemsHtml += `<img src="https://ddragon.leagueoflegends.com/cdn/${DATA_DRAGON_VERSION}/img/item/${j[`item${i}`]}.png" class="item-icon">`;
                 }
             }
 
-            // Gestion de la rune principale si présente
             let runeHtml = "";
             if (j.perks && j.perks.styles && j.perks.styles[0] && j.perks.styles[0].selections && j.perks.styles[0].selections[0]) {
                 const runeId = j.perks.styles[0].selections[0].perk;
@@ -687,13 +649,12 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                 }
             }
 
-            // Injection de la carte dans la page
             resContainer.innerHTML += `
                 <div class="match-card ${j.win ? 'win' : 'loss'}">
-                    <img src="https://ddragon.leagueoflegends.com/cdn/14.1.1/img/champion/${j.championName}.png" class="champ-icon">
+                    <img src="https://ddragon.leagueoflegends.com/cdn/${DATA_DRAGON_VERSION}/img/champion/${j.championName}.png" class="champ-icon">
                     <div style="flex-grow:1">
                         <div class="stat-grid">
-                            <div><strong>Champion :</strong> ${j.championName} <span>🆚 ${j.vsChampion || 'Inconnu'}</span></div>
+                            <div><strong>Champion :</strong> ${j.championName}</div>
                             <div><strong>Score :</strong> ${j.kills}/${j.deaths}/${j.assists}</div>
                             <div><strong>CS :</strong> ${totalCS} (${csPerMin}/min)</div>
                             <div><strong>Vision :</strong> ${vision}</div>
@@ -707,58 +668,38 @@ if (featuresBlock) featuresBlock.style.display = 'none';
             const resContainer = document.getElementById('resultat');
             if (!resContainer) return;
 
-            // RENDRE LES STATS VISIBLES : On va chercher tes deux blocs masqués
             const statsGlobales = document.getElementById('stats-globales');
             const chartContainer = document.getElementById('chart-container');
             
-            // Si on les trouve, on les affiche en grand !
             if (statsGlobales) statsGlobales.style.display = 'block';
             if (chartContainer) chartContainer.style.display = 'block';
 
-            // On efface les anciennes cartes de match de l'écran
             const cartesExistantes = resContainer.querySelectorAll('.match-card');
             cartesExistantes.forEach(carte => carte.remove());
 
-            // On trie tes données selon le champion choisi
             let matchsFiltres = matchData;
             if (champ !== 'Tous') {
                 matchsFiltres = matchData.filter(m => m.championName === champ);
             }
 
-            // On met à jour le bloc des moyennes (KDA, Winrate...) et le Graphique
-            if (typeof calculerMoyennes === 'function') {
-                calculerMoyennes(matchsFiltres);
-            }
-            if (typeof updateChart === 'function') {
-                updateChart(matchsFiltres);
-            }
+            calculerMoyennes(matchsFiltres);
+            updateChart(matchsFiltres);
 
-            // On dessine les nouvelles cartes correspondantes !
-            matchsFiltres.forEach(match => {
-                if (typeof renderMatch === 'function') {
-                    renderMatch(match);
-                }
-            });
+            matchsFiltres.forEach(match => renderMatch(match));
         }
 
-       // Mise à jour du graphique linéaire Chart.js
         function updateChart(data) {
-            // 1. On détruit l'instance JS si elle existe
             if (chart) {
                 chart.destroy();
                 chart = null;
             }
 
-            // 2. NETTOYAGE RADICAL : On recrée le canvas de zéro pour effacer les résidus visuels
             const container = document.getElementById('chart-container');
             if (container) {
                 container.innerHTML = '<canvas id="kdaChart" style="max-height: 300px;"></canvas>';
             }
 
-            // 3. On calcule les nouvelles valeurs de KDA
             const kdaValues = data.map(j => ((j.kills + j.assists) / Math.max(1, j.deaths)).toFixed(2));
-
-            // 4. On récupère le NOUVEAU canvas et on dessine le graphique clean
             const ctx = document.getElementById('kdaChart').getContext('2d');
             chart = new Chart(ctx, {
                 type: 'line',
@@ -775,15 +716,12 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                 },
                 options: { 
                     responsive: true, 
-                    animation: false, // 🌟 LE FIX ULTRA-CLEAN : Désactive l'animation pour supprimer le bug des lignes fantômes
-                    scales: { 
-                        y: { beginAtZero: true } 
-                    } 
+                    animation: false, 
+                    scales: { y: { beginAtZero: true } } 
                 }
             });
         }
 
-        // Méta dynamique selon Serveur / Rang / Lane
         function voirMeilleursPersos() {
             const lane = document.getElementById('meta-lane').value;
             const rank = document.getElementById('meta-rank').value;
@@ -798,37 +736,44 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                 lowRank: { TOP: "Garen (S+), Mordekaiser (S)", JUNGLE: "Master Yi (S+), Amumu (S)", MID: "Malzahar (S+), Lux (S)", ADC: "Miss Fortune (S+), Ashe (S)", SUPPORT: "Blitzcrank (S+), Brand (S)" }
             };
 
-            const metaKorea = {
-                highRank: { TOP: "Jayce (S+), Renekton (S)", JUNGLE: "Lee Sin (S+), Nidalee (S)", MID: "Taliyah (S+), Azir (S)", ADC: "Kalista (S+), Varus (S)", SUPPORT: "Nautilus (S+), Ashe (S)" },
-                midRank: metaStandard.midRank, lowRank: metaStandard.lowRank
-            };
-
-            let currentMeta = (server === "KR") ? metaKorea : metaStandard;
-            let rankGroup = (rank === "Diamond" || rank === "Master") ? currentMeta.highRank : ((rank === "Gold" || rank === "Platinum" || rank === "Emerald") ? currentMeta.midRank : currentMeta.lowRank);
-
+            let rankGroup = (rank === "Diamond" || rank === "Master") ? metaStandard.highRank : ((rank === "Gold" || rank === "Platinum" || rank === "Emerald") ? metaStandard.midRank : metaStandard.lowRank);
             const champions = rankGroup[lane];
             const textRank = document.getElementById('meta-rank').options[document.getElementById('meta-rank').selectedIndex].text;
-            let tagKR = (server === "KR") ? " 🇰🇷 (Meta Pro)" : "";
 
             if (container) {
-                container.innerHTML = `🏆 Top Tier Actuel (${server} - ${textRank})${tagKR} : <span style="color: #00d2ff; margin-left: 5px; font-weight: bold;">${champions}</span>`;
+                container.innerHTML = `🏆 Top Tier Actuel (${server} - ${textRank}) : <span style="color: #00d2ff; margin-left: 5px; font-weight: bold;">${champions}</span>`;
             }
         }
 
+        // 🚀 FONCTION UPDATE CONNECTÉE : Ouvre directement ton archive de déploiement !
         function telechargerAppAlert() {
-            alert("🚀 L'application Zenith desktop est en cours de développement ! Les fonctionnalités in-game arrivent prochainement.");
+            const cloudDownloadUrl = "https://raw.githubusercontent.com/zenithstatsgg-jpg/zenithstats-app/main/version.json";
+            
+            fetch(cloudDownloadUrl)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.downloadUrl) {
+                        window.open(data.downloadUrl, '_blank');
+                    } else {
+                        alert("Le miroir de téléchargement est en cours de synchronisation. Réessaye dans un instant !");
+                    }
+                })
+                .catch(() => {
+                    // Repli de secours vers ton dépôt principal si le fichier raw met du temps à répondre
+                    window.open("https://github.com/zenithstatsgg-jpg/zenithstats-app", '_blank');
+                });
         }
 
-        // --- MOTEUR DE NAVIGATION SINGLE PAGE (SPA) ---
+        /* --- MOTEUR DE NAVIGATION SINGLE PAGE (SPA) --- */
         function ouvrirOngletMeta() {
             document.getElementById('en-tete').style.display = 'none';
             document.getElementById('page-concept-app').style.display = 'none';
             document.getElementById('chart-container').style.display = 'none';
             document.getElementById('stats-globales').style.display = 'none';
             document.getElementById('resultat').style.display = 'none';
+            document.getElementById('landing-features').style.display = 'none';
             
             document.getElementById('page-meta').style.display = 'block';
-            
             document.querySelectorAll('.navbar-links a').forEach(a => a.classList.remove('active'));
             document.getElementById('nav-meta').classList.add('active');
         }
@@ -844,11 +789,14 @@ if (featuresBlock) featuresBlock.style.display = 'none';
                 if (containerGraphique) containerGraphique.style.display = 'block';
                 if (statsGlobales) statsGlobales.style.display = 'block';
                 if (containerMatchs) containerMatchs.style.display = 'block';
+                document.getElementById('landing-features').style.display = 'none';
+            } else {
+                // 🛡️ FIX : Fait réapparaître les cartes marketing si aucune recherche n'a été faite !
+                document.getElementById('landing-features').style.display = 'block';
             }
             
             document.getElementById('page-meta').style.display = 'none';
             document.getElementById('page-concept-app').style.display = 'none';
-            
             document.querySelectorAll('.navbar-links a').forEach(a => a.classList.remove('active'));
             document.getElementById('nav-accueil').classList.add('active');
         }
@@ -859,14 +807,13 @@ if (featuresBlock) featuresBlock.style.display = 'none';
             document.getElementById('chart-container').style.display = 'none';
             document.getElementById('stats-globales').style.display = 'none';
             document.getElementById('resultat').style.display = 'none';
+            document.getElementById('landing-features').style.display = 'none';
             
             document.getElementById('page-concept-app').style.display = 'block';
-            
             document.querySelectorAll('.navbar-links a').forEach(a => a.classList.remove('active'));
             document.getElementById('nav-concept').classList.add('active');
         }
 
-        // Liaison forcée au bouton HTML d'origine
         const boutonAnalyser = document.getElementById('btn-analyser-barre');
         if (boutonAnalyser) {
             boutonAnalyser.onclick = function() {
